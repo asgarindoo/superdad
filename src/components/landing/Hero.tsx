@@ -7,6 +7,7 @@ import { OrbitControls, Environment, ContactShadows, RoundedBox } from "@react-t
 import { Chip } from "@/components/shared/Chip"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const ROOM_STYLES = {
   scandinavian: { color: "#FCFCFA", light: "#ECECE8", name: "Scandinavian" },
@@ -97,9 +98,11 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="mt-10 pointer-events-auto"
         >
-          <Button size="lg" className="rounded-[var(--radius-button)] text-lg px-8 py-6 shadow-soft hover-lift">
-            Start Building
-          </Button>
+          <Link href="/register">
+            <Button size="lg" className="rounded-[var(--radius-button)] text-lg px-8 py-6 shadow-soft hover-lift">
+              Start Building
+            </Button>
+          </Link>
         </motion.div>
       </div>
 

@@ -7,8 +7,16 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Heart } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 export default function RegisterPage() {
+  const router = useRouter()
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    router.push("/verify-email")
+  }
+
   return (
     <div className="min-h-screen bg-surface flex flex-col items-center justify-center p-4">
       <Link href="/" className="mb-8 flex items-center gap-2 group hover-lift">
@@ -29,7 +37,7 @@ export default function RegisterPage() {
               <p className="text-secondary-text text-sm">Create an account to start your journey.</p>
             </div>
 
-            <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
               <div className="flex flex-col gap-2">
                 <label className="text-sm font-medium text-primary-text" htmlFor="name">Preferred Name</label>
                 <Input id="name" type="text" placeholder="What should he call you?" className="h-12" />

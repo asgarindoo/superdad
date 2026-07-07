@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { Check } from "lucide-react"
+import Link from "next/link"
 
 export function Pricing() {
   return (
@@ -42,9 +43,11 @@ export function Pricing() {
                   ))}
                 </ul>
 
-                <Button variant="outline" className="w-full rounded-[var(--radius-button)] py-6 text-base">
-                  Move In
-                </Button>
+                <Link href="/register" className="w-full">
+                  <Button variant="outline" className="w-full rounded-[var(--radius-button)] py-6 text-base">
+                    Move In
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </motion.div>
@@ -81,9 +84,11 @@ export function Pricing() {
                   ))}
                 </ul>
 
-                <Button variant="secondary" className="w-full rounded-[var(--radius-button)] py-6 text-base font-semibold text-primary">
-                  Sponsor the Home
-                </Button>
+                <Link href="/register" className="w-full">
+                  <Button variant="secondary" className="w-full rounded-[var(--radius-button)] py-6 text-base font-semibold text-primary">
+                    Sponsor the Home
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </motion.div>

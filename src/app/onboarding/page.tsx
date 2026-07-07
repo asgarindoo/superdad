@@ -183,7 +183,7 @@ export default function OnboardingPage() {
                   <h2 className="text-2xl font-heading font-medium text-primary-text">Your home is ready.</h2>
                   <p className="text-secondary-text">He's waiting inside.</p>
                   <Button 
-                    onClick={() => router.push('/room')} 
+                    onClick={() => router.push('/creator')} 
                     className="mt-8 px-8 h-12 rounded-[var(--radius-button)] hover-lift"
                   >
                     Enter the Room

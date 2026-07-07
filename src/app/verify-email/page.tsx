@@ -35,7 +35,12 @@ export default function VerifyEmailPage() {
             </div>
 
             <div className="w-full flex flex-col gap-3 mt-4">
-              <Button variant="outline" className="w-full h-12 text-base hover-lift">
+              <Link href="/onboarding" className="w-full">
+                <Button className="w-full h-12 text-base rounded-[var(--radius-button)] hover-lift">
+                  I verified my email
+                </Button>
+              </Link>
+              <Button variant="outline" className="w-full h-12 text-base rounded-[var(--radius-button)] hover-lift mt-2">
                 Resend Email
               </Button>
               <Link href="/login" className="text-sm font-medium text-secondary-text hover:text-primary transition-colors mt-2">

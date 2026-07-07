@@ -3,6 +3,7 @@
 import * as React from "react"
 import { Navbar } from "@/components/layout/Navbar"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function FloatingNavbar() {
   return (
@@ -13,9 +14,11 @@ export function FloatingNavbar() {
           <a href="#memories" className="text-sm font-medium text-secondary-text hover:text-primary-text transition-colors">Memories</a>
           <a href="#pricing" className="text-sm font-medium text-secondary-text hover:text-primary-text transition-colors">Pricing</a>
         </div>
-        <Button variant="default" className="rounded-[var(--radius-button)]">
-          Move In
-        </Button>
+        <Link href="/register">
+          <Button variant="default" className="rounded-[var(--radius-button)]">
+            Move In
+          </Button>
+        </Link>
       </Navbar>
     </div>
   )
